@@ -85,6 +85,9 @@ margin-left: 33.3333%;
 
 .page-section{
 grid-column:span 3;
+margin-right:auto;
+margin-left:auto;
+max-width: 100%;
 
 }
 
@@ -100,16 +103,16 @@ section h2{
   grid-template-areas:
   "ApplicationTwo ApplicationThree ApplicationFour ApplicationFive"
   "DescTwo DescThree DescFour DescFive"
+
 }
 
 .Images{
-  align-items: center;
-  margin-right: 1%;
-  margin-left: 1%;
+  margin:5%;
   max-width: 100%;
   height: 100%;
 
 }
+
 .ApplicationOne{
   align-items: center;
   margin-right: 1%;
@@ -148,36 +151,33 @@ section h2{
 }
 
 .ApplicationFive{
-align-items: center;
-margin-right: 1%;
-margin-left: 1%;
-max-width: 100%;
-grid-area: ApplicationFive;
+ align-items: center;
+ margin-right: 1%;
+ margin-left: 1%;
+ max-width: 100%;
+ grid-area: ApplicationFive;
           
 }
 
 .description{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
 }
 
 .contact{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
 }
 
 .footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 /* images aligned ontop once screen gets small, wording smaller for user form*/
 @media screen and (max-width: 650px) {
@@ -217,4 +217,5 @@ grid-area: ApplicationFive;
   .nav{
     font-size:x-small;
   }
+}
 }
