@@ -1,23 +1,220 @@
 * {
   box-sizing: border-box;
+
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  /* Created a display grid under the Title*/
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+header{
+  /* Coloured head background*/
+  background:#632b30;
+
 }
 
-p {
+h1{
+  color:#fadf63;
+  text-align: center;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #2774a5;
+  height: 60px;
+  }
+
+a{
+  color:#fadf63;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.hero{
+  width:  100%;
+  height: 20%;
+  margin: 10%;
+  margin-bottom: 0%;
+}
+
+h2{
+  text-align: center;
+  grid-column: span 3;
+}
+
+h3{
+  text-align: center;
+}
+
+main{
   margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.grid-container{
+display: grid;
+/* create 3 main columns with a gap to full width*/
+grid-template-columns: 1fr 1fr 1fr;
+gap: 0.5%;
+max-width: 100%;
+margin: 0.5%;
+max-width: 100%;
+align-items: center;
+}
+
+/* set About me to center 50% column width spanning 3 columns*/
+.about{
+grid-column: span 3;
+align-items: center;
+margin-left:auto
+
+}
+/* set image to center 50% column width inside the 50% already set on about spanning 3 columns*/
+.hero-banner{
+width: 33.333%;
+align-items: center;
+grid-column: span 3;
+margin-left: 33.3333%;
+
+}
+
+.page-section{
+grid-column:span 3;
+
+}
+
+section h2{
+  grid-column: span 3;
+  align-items:center
+}
+
+/* Set up a seperate grid for media queries manipulation*/
+.ImagesTwo{
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-areas:
+  "ApplicationTwo ApplicationThree ApplicationFour ApplicationFive"
+  "DescTwo DescThree DescFour DescFive"
+}
+
+.Images{
+  align-items: center;
+  margin-right: 1%;
+  margin-left: 1%;
+  max-width: 100%;
+  height: 100%;
+
+}
+.ApplicationOne{
+  align-items: center;
+  margin-right: 1%;
+  margin-left: 1%;
+  max-width: 100%;
+  height: 100%;
+  grid-area: ApplicationOne;
+  
+}
+
+.ApplicationTwo{
+ align-items: center;
+ margin-right: 1%;
+ margin-left: 1%;
+ max-width: 100%;
+ grid-area: ApplicationTwo;
+  
+}
+
+.ApplicationThree{
+ align-items: center;
+ margin-right: 1%;
+ margin-left: 1%;
+ max-width: 100%;
+ grid-area: ApplicationThree;
+      
+}
+
+.ApplicationFour{
+ align-items: center;
+ margin-right: 1%;
+ margin-left: 1%;
+ max-width: 100%;
+ grid-area: ApplicationFour;
+        
+}
+
+.ApplicationFive{
+align-items: center;
+margin-right: 1%;
+margin-left: 1%;
+max-width: 100%;
+grid-area: ApplicationFive;
+          
+}
+
+.description{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contact{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+/* images aligned ontop once screen gets small, wording smaller for user form*/
+@media screen and (max-width: 650px) {
+
+  .ImagesTwo{
+    max-width: 75%;
+    display:grid;
+    Margin:10%;
+    grid-template-columns:repeat(1,1fr);
+    grid-template-areas:
+    "ApplicationTwo"
+    "DescTwo"
+    "ApplicationThree"
+    "DescThree"
+    "ApplicationFour"
+    "DescFour"
+    "ApplicationFive"
+    "DescFive";
+  }
+  .contact{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    font-size: small;
+    height: 200px;
+}
+
+@media screen and (max-width: 300px) {
+  .contact{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    font-size: xx-small;
+    height: 200px;
+
+  }
+  .nav{
+    font-size:x-small;
+  }
 }
